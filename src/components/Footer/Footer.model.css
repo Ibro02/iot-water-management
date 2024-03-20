@@ -1,0 +1,41 @@
+footer
+{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.224);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: white;
+    
+}
+.nav-options
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    padding: 10px 0;
+}
+
+.nav-icons
+{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 650px) {
+    .nav-options 
+{
+    width: 4.4rem;
+    padding: 2px 0;
+}
+footer
+{
+    gap: 3rem;
+
+}
+}

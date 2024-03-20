@@ -1,0 +1,39 @@
+.container
+{
+    display: flex;
+    
+}
+
+.manual-refuel
+{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+}
+
+.icons
+{
+    font-size: 1.5rem;
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.refueling
+{
+    display: flex; 
+    flex-direction: column;   
+    justify-content: space-around;
+    margin-bottom: -30px;
+}
+
+.progress-bar
+{
+    display: flex;
+    margin: auto;
+
+}
+

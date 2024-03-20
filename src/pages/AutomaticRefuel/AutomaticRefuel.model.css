@@ -1,0 +1,19 @@
+.container
+{
+    justify-content: center;
+}
+.automatic-refuel
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75vh;
+}
+
+.button button
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
