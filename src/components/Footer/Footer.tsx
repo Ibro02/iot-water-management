@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Footer.model.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faRefresh, faWater } from "@fortawesome/free-solid-svg-icons";

@@ -9,7 +9,7 @@ interface IButton
     color?: string,
     type?: number | string,
     disabled?:boolean,
-    onClick: any
+    onClick?: any
 }
 
 
@@ -24,7 +24,7 @@ function Button({children,backgroundColor, color, type,disabled,onClick}:IButton
       
     }
   return <div className="button">
-    <button style={style} onClick={onClick}>{children}</button>
+    <button style={style} onClick={onClick} disabled={disabled}>{children}</button>
   </div>;
 }
 

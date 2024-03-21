@@ -1,8 +1,8 @@
-import React from "react";
 import Button from "../../components/Button/Button";
 import './HomePage.model.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
+
 
 function HomePage() {
     const deviceName = "NODEMCU3886";

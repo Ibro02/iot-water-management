@@ -7,7 +7,25 @@ import AutomaticRefuel from "./pages/AutomaticRefuel/AutomaticRefuel";
 import Footer from "./components/Footer/Footer";
 import 'firebase/compat/firestore'
 import 'firebase/compat/database' // <-- Import RTDB SDK
-import { getDatabase, ref, set,onValue} from "firebase/database";
+import { getDatabase, ref,onValue} from "firebase/database";
+import { initializeApp } from "firebase/app";
+
+
+export const firebaseConfig = {
+  apiKey: import.meta.env.API_KEY,
+  authDomain: import.meta.env.AUTH_DOMAIN,
+  databaseURL: "https://iot-project-feed2-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: import.meta.env.PROJECT_ID,
+  storageBucket: import.meta.env.STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.MESSAGING_SENDER_ID,
+  appId: import.meta.env.APP_ID,
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+export const db = getDatabase(app); 
+
 function App() {
 
 	const [currentPage, getCurrentPage] = useState<number>(1);

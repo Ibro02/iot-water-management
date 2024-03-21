@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import {  useState } from "react";
+import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Button from "../../components/Button/Button";
 import "./ManualRefuel.model.css";
 import 'firebase/compat/firestore'
 import 'firebase/compat/database' // <-- Import RTDB SDK
-import { getDatabase, ref, set,onValue} from "firebase/database";
+import { getDatabase, ref, set} from "firebase/database";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -21,10 +21,11 @@ function ManualRefuel({waterLevel}:IWaterLevev) {
     
 	const [isWaterPinWorking, setWaterPinWorkStatus] = useState<boolean>(false);
 	const [isPoolPinWorking, setPoolPinWorkStatus] = useState<boolean>(false);
-		var cartId = 1;
 		
 	const turnOnWaterPin = () =>
 	{
+console.log(import.meta.env.API_KEY)
+
 		setWaterPin(!waterPin);
 		set(ref(database, 'waterPin/boolean'), waterPin).then( () => {
 			// Success.
@@ -41,7 +42,6 @@ function ManualRefuel({waterLevel}:IWaterLevev) {
 		setPoolPin(!poolPin);
 		await set(ref(database, 'poolPin/boolean'), poolPin).then( () => {
 			// Success.
-			console.clear();
 			setPoolPinWorkStatus(poolPin);
 		} ).catch( (error) => {
 			console.log(error);
@@ -53,7 +53,7 @@ function ManualRefuel({waterLevel}:IWaterLevev) {
 		<div className="manual-refuel">
 			<h1>Water level</h1>
 			<div className="progress-bar" style={{width:290}}>
-			<CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({
+			<CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({
 				textColor: 'black',
 				pathColor: '#6600FF',
 			})}/>
@@ -76,7 +76,5 @@ function ManualRefuel({waterLevel}:IWaterLevev) {
 }
 
 export default ManualRefuel;
-function setData(data: any) {
-	throw new Error("Function not implemented.");
-}
+
 

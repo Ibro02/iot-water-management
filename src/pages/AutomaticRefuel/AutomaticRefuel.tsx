@@ -1,4 +1,4 @@
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import {CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Button from "../../components/Button/Button";
 import "./AutomaticRefuel.model.css"
@@ -58,7 +58,7 @@ const turnRefuel = () =>
   return <div className="automatic-refuel">
   <h1>Water level</h1>
   <div style={{width:290}}>
-  <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({textColor:'black',
+  <CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({textColor:'black',
   pathColor: '#6600FF',
 })}/>
   </div>
