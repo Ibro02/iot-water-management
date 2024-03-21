@@ -37,6 +37,7 @@ h4{
     display: flex;
 justify-content: center;
 margin: auto;
+
 }
 
 @media (max-width: 650px),(max-height: 777px){

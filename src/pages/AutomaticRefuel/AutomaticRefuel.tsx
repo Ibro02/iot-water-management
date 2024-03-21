@@ -11,7 +11,7 @@ import { faInfoCircle, faRefresh } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import Spinner from "../../components/Spinner/Spinner";
 
-function AutomaticRefuel({waterLevel}:IWaterLevev) {
+function AutomaticRefuel({waterLevel, isDarkMode}:IWaterLevev) {
     const percentage = waterLevel??0;
     const [isPumping, setPumpingStatus] = useState<boolean>(false);
     const database = getDatabase();
@@ -58,7 +58,7 @@ const turnRefuel = () =>
   return <div className="automatic-refuel">
   <h1>Water level</h1>
   <div style={{width:'38vh', margin:'auto'}}>
-  <CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({textColor:'black',
+  <CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({textColor:isDarkMode?"white":"black",
   pathColor: '#6600FF',
 })}/>
   </div>

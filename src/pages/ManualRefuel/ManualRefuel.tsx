@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Button from "../../components/Button/Button";
@@ -12,16 +12,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export interface IWaterLevev
 {
 	waterLevel?:number|null,
-	refuelStatus?:boolean
+	refuelStatus?:boolean,
+	isDarkMode?:boolean,
 }
-function ManualRefuel({waterLevel}:IWaterLevev) {
+function ManualRefuel({waterLevel,isDarkMode}:IWaterLevev) {
 	const database = getDatabase();
 	const [waterPin, setWaterPin] = useState<boolean>(false);
 	const [poolPin, setPoolPin] = useState<boolean>(false);
     
 	const [isWaterPinWorking, setWaterPinWorkStatus] = useState<boolean>(false);
 	const [isPoolPinWorking, setPoolPinWorkStatus] = useState<boolean>(false);
-		
+
 	const turnOnWaterPin = () =>
 	{
 console.log(import.meta.env.API_KEY)
@@ -33,8 +34,6 @@ console.log(import.meta.env.API_KEY)
 		} ).catch( (error) => {
 			console.log(error);
 		} );
-
-
 	}
 	const turnOnPoolPin = async () =>
 	{
@@ -48,13 +47,14 @@ console.log(import.meta.env.API_KEY)
 		} );
 
 	}
+
 	const percentage = waterLevel??0;
 	return (
 		<div className="manual-refuel">
 			<h1>Water level</h1>
 			<div className="progress-bar" style={{width:'38vh'}}>
 			<CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({
-				textColor: 'black',
+				textColor: isDarkMode?"white":"black",
 				pathColor: '#6600FF',
 			})}/>
 			</div>

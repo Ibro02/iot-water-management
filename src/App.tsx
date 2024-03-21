@@ -25,13 +25,21 @@ const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app); 
 
 function App() {
-
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 	const [currentPage, getCurrentPage] = useState<number>(1);
-	
+    const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode || (window.matchMedia && window.matchMedia('(prefers-color-scheme: no-preference)').matches));
 	
 	const [data, setData] = useState<number|null>(null);
 	const database = getDatabase();
+	window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
 	
+	  const updateDarkMode = (e:any) => {
+	  setIsDarkMode(e.matches);
+	  };
+	
+	  window.matchMedia('(prefers-color-scheme: dark)').addListener(updateDarkMode);
+	
+
 	useEffect(() => {
 	const cartRef = ref(database, 'dubina/int');
 onValue(cartRef, (snapshot) => {
@@ -42,8 +50,6 @@ onValue(cartRef, (snapshot) => {
   } else {
     console.log('Data not found');
   } 
-  
-  
 });
   }, []);
 
@@ -53,9 +59,9 @@ onValue(cartRef, (snapshot) => {
 			case 1:
 				return <HomePage />;
 			case 2:
-				return <ManualRefuel waterLevel={data} />;
+				return <ManualRefuel waterLevel={data} isDarkMode={isDarkMode}/>;
 			case 3:
-				return <AutomaticRefuel  waterLevel={data}/>;
+				return <AutomaticRefuel  waterLevel={data} isDarkMode={isDarkMode}/>;
 			default:
 				<HomePage />;
 		}

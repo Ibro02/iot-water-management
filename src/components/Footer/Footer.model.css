@@ -1,5 +1,7 @@
+
 footer
 {
+
     position: fixed;
     display: flex;
     align-items: center;
@@ -21,7 +23,11 @@ footer
     width: 10rem;
     padding: 10px 0;
 }
-
+footer div 
+{
+    color-scheme: light dark;
+    color: rgb(24, 24, 24);
+}
 .nav-icons
 {
     font-size: 1.5rem;
