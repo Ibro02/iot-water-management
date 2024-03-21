@@ -62,6 +62,7 @@ const turnRefuel = () =>
   pathColor: '#6600FF',
 })}/>
   </div>
+      {!isPumping&&<h4><FontAwesomeIcon icon={faInfoCircle} className="icons"></FontAwesomeIcon> Click the button to refuel water tank</h4>}
 
      {!isPumping?<Button backgroundColor="purple" color="white" type={2}  onClick={turnRefuel}>
      <FontAwesomeIcon icon={faRefresh} className="icons"></FontAwesomeIcon>
@@ -72,7 +73,6 @@ const turnRefuel = () =>
       <h2>Refueling{dots}</h2>
       </div>}
   
-      {!isPumping&&<h4><FontAwesomeIcon icon={faInfoCircle} className="icons"></FontAwesomeIcon> Click the button to refuel water tank</h4>}
 </div>
 }
 

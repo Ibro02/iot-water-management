@@ -59,17 +59,16 @@ console.log(import.meta.env.API_KEY)
 			})}/>
 			</div>
 
-			<div>
+			<div className="container-reverse">
 				<div className="container">
 				<Button backgroundColor={!isWaterPinWorking?"#6600FF":"red"} color="white" onClick={turnOnWaterPin}>
 				+ Increase
 				</Button>
-				
 				<Button color="white" backgroundColor={!isPoolPinWorking?"#6600FF":"red"}  onClick={turnOnPoolPin}>
 					- Reduce
 					</Button>
 				</div>
-			<h4><FontAwesomeIcon icon={faInfoCircle} className="icons"></FontAwesomeIcon> Hold button to change water level</h4>
+			<h4><FontAwesomeIcon icon={faInfoCircle} className="icons"></FontAwesomeIcon> Click the button to change water level</h4>
 			</div>
 		</div>
 	);

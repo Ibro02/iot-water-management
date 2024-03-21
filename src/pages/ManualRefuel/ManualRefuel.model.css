@@ -1,15 +1,17 @@
 .container
 {
     display: flex;
-    
 }
-
+.container-reverse
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .manual-refuel
 {
-     display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 75vh;
+    justify-content: center;
 }
 
 .icons
@@ -34,6 +36,17 @@ h4{
 {
     display: flex;
     margin: auto;
-
 }
 
+@media (max-width: 650px){
+    .manual-refuel
+{
+    justify-content: center;
+    margin: 0;
+    font-size: 0.8rem;
+}
+.icons
+{
+    font-size: 1rem;
+}
+}
