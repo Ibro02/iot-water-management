@@ -35,10 +35,11 @@ h4{
 .progress-bar
 {
     display: flex;
-    margin: auto;
+justify-content: center;
+margin: auto;
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px),(max-height: 777px){
     .manual-refuel
 {
     justify-content: center;

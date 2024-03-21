@@ -57,7 +57,7 @@ const turnRefuel = () =>
 
   return <div className="automatic-refuel">
   <h1>Water level</h1>
-  <div style={{width:290}}>
+  <div style={{width:'38vh', margin:'auto'}}>
   <CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({textColor:'black',
   pathColor: '#6600FF',
 })}/>

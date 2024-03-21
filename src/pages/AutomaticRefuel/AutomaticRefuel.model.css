@@ -19,7 +19,7 @@
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 650px),(max-height: 777px)  {
     .automatic-refuel
 {
     height: 0;

@@ -52,7 +52,7 @@ console.log(import.meta.env.API_KEY)
 	return (
 		<div className="manual-refuel">
 			<h1>Water level</h1>
-			<div className="progress-bar" style={{width:290}}>
+			<div className="progress-bar" style={{width:'38vh'}}>
 			<CircularProgressbarWithChildren value={percentage} text={`${percentage}%`} styles={buildStyles({
 				textColor: 'black',
 				pathColor: '#6600FF',

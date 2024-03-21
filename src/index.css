@@ -35,7 +35,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-@media (max-width: 650px) {
+@media (max-width: 650px),(max-height: 777px) {
   h1
 {
 font-size: 2rem !important;

@@ -14,7 +14,7 @@
     margin: 1.1rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 650px),(max-height: 777px) {
     .header h1
 {
   
