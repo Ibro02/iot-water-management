@@ -5,8 +5,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import ManualRefuel from "./pages/ManualRefuel/ManualRefuel";
 import AutomaticRefuel from "./pages/AutomaticRefuel/AutomaticRefuel";
 import Footer from "./components/Footer/Footer";
-import 'firebase/compat/firestore'
-import 'firebase/compat/database' // <-- Import RTDB SDK
 import { getDatabase, ref,onValue} from "firebase/database";
 import { initializeApp } from "firebase/app";
 
