@@ -17,7 +17,7 @@ interface IButton
 function Button({children,backgroundColor, color, type,disabled,onClick}:IButton) {
     const style:  React.CSSProperties = 
     {
-        backgroundColor: backgroundColor??'red',
+        backgroundColor: !disabled?backgroundColor??'red':'#8440eb90',
         color: color,
         borderRadius: 100,
         height: type==2?100:'',

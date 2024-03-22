@@ -61,10 +61,10 @@ console.log(import.meta.env.API_KEY)
 
 			<div className="container-reverse">
 				<div className="container">
-				<Button backgroundColor={!isWaterPinWorking?"#6600FF":"red"} color="white" onClick={turnOnWaterPin}>
+				<Button backgroundColor={!isWaterPinWorking?"#6600FF":"red"} color="white" onClick={turnOnWaterPin} disabled={isPoolPinWorking}>
 				+ Increase
 				</Button>
-				<Button color="white" backgroundColor={!isPoolPinWorking?"#6600FF":"red"}  onClick={turnOnPoolPin}>
+				<Button color="white" backgroundColor={!isPoolPinWorking?"#6600FF":"red"}  onClick={turnOnPoolPin} disabled={isWaterPinWorking}>
 					- Reduce
 					</Button>
 				</div>
