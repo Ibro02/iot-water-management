@@ -68,7 +68,7 @@ console.log(import.meta.env.API_KEY)
 					- Reduce
 					</Button>
 				</div>
-			<h4><FontAwesomeIcon icon={faInfoCircle} className="icons"></FontAwesomeIcon> Click the button to change water level</h4>
+			<h4><FontAwesomeIcon icon={faInfoCircle} className="icons"></FontAwesomeIcon> Click the button to activate/stop water pump</h4>
 			</div>
 		</div>
 	);

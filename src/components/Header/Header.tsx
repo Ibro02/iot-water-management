@@ -5,7 +5,7 @@ interface IHeader
 }
 function Header({selectedOption}:IHeader) {
 
-var headerLabels = new Array('Home','Manual Refuel','Automatic refuel');
+var headerLabels = new Array('Home','Manual fill','Automatic refill');
 
 
   return <div className="header"><h1>{headerLabels[selectedOption-1]}</h1></div>;

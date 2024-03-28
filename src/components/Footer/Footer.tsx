@@ -18,11 +18,11 @@ function Footer({onChange}:any) {
 			</div>
 			<div className="nav-options" onClick={()=>changePage(2)}  style={currentPage == 2?{backgroundColor:'rgba(119, 0, 255, 0.208)',borderRadius:100}:{backgroundColor:"transparent"}}>
 			<FontAwesomeIcon icon={faWater} className="nav-icons"></FontAwesomeIcon>
-				<h3>Manual refuel</h3>
+				<h3>Manual refill</h3>
 			</div>
 			<div className="nav-options" onClick={()=>changePage(3)}  style={currentPage == 3?{backgroundColor:'rgba(119, 0, 255, 0.208)',borderRadius:100}:{backgroundColor:"transparent"}}>
 			<FontAwesomeIcon icon={faRefresh} className="nav-icons"></FontAwesomeIcon>
-				<h3>Automatic refuel</h3>
+				<h3>Automatic refill</h3>
 			</div>
 		</footer>
 	);

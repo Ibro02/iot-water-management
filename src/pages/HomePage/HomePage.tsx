@@ -14,6 +14,7 @@ function HomePage() {
       <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
       Manage settings
       </Button>
+      {/* <Login/> */}
   </div>;
 }
 

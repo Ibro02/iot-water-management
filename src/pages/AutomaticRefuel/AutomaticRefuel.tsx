@@ -66,11 +66,11 @@ const turnRefuel = () =>
 
      {!isPumping?<Button backgroundColor="purple" color="white" type={2}  onClick={turnRefuel}>
      <FontAwesomeIcon icon={faRefresh} className="icons"></FontAwesomeIcon>
-          Refuel
+          Refill
       </Button>:<div className="refueling">
       <Spinner/>
       
-      <h2>Refueling{dots}</h2>
+      <h2>Refilling{dots}</h2>
       </div>}
   
 </div>
